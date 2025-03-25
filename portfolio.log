@@ -3,3 +3,28 @@
 2025-03-25 19:44:10,424 - __main__ - INFO - database portfolio available => True
 2025-03-25 19:44:47,766 - __main__ - INFO - database => portfolio available => True
 2025-03-25 19:45:47,168 - __main__ - INFO - create database portfolio
+2025-03-25 19:55:29,529 - __main__ - INFO - Start Prg
+2025-03-25 19:55:29,529 - __main__ - INFO - Finish Prg
+2025-03-25 20:06:47,662 - __main__ - INFO - Start Prg
+2025-03-25 20:06:47,662 - __main__ - INFO - Finish Prg
+2025-03-25 20:13:41,025 - __main__ - INFO - Start Prg
+2025-03-25 20:13:41,025 - __main__ - INFO - Finish Prg
+2025-03-25 20:13:41,026 - __main__ - DEBUG - call direct
+2025-03-25 20:15:45,735 - __main__ - DEBUG - start init_logger
+2025-03-25 20:15:45,735 - __main__ - DEBUG - finished init_logger
+2025-03-25 20:15:45,735 - __main__ - INFO - Start Prg
+2025-03-25 20:15:45,735 - __main__ - INFO - Finish Prg
+2025-03-25 20:15:45,735 - __main__ - DEBUG - call direct
+2025-03-25 20:41:34,935 - __main__ - DEBUG - start init_logger
+2025-03-25 20:41:34,935 - __main__ - DEBUG - finished init_logger
+2025-03-25 20:41:34,935 - __main__ - DEBUG - prg call direct
+2025-03-25 20:41:34,935 - __main__ - INFO - Start Prg
+2025-03-25 20:41:34,936 - __main__ - INFO - init mysql connection
+2025-03-25 20:41:34,978 - __main__ - INFO - Finish Prg
+2025-03-25 20:41:34,979 - __main__ - DEBUG - call as module
+2025-03-25 20:42:32,635 - __main__ - DEBUG - start init_logger
+2025-03-25 20:42:32,635 - __main__ - DEBUG - finished init_logger
+2025-03-25 20:42:32,635 - __main__ - DEBUG - prg call direct
+2025-03-25 20:42:32,635 - __main__ - INFO - Start Prg
+2025-03-25 20:42:32,635 - __main__ - INFO - init mysql connection
+2025-03-25 20:42:32,678 - __main__ - INFO - Finish Prg
