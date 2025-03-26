@@ -91,7 +91,7 @@ def init_logger():
     # FROM HERE
     # https://stackoverflow.com/questions/20618570/python-logging-formatter-is-there-any-way-to-fix-the-width-of-a-field-and-jus
     formatter = logging.Formatter(
-        "%(levelname)8s | %(asctime)s | %(name)s | %(filename)s:%(funcName)25s | Line %(lineno)s | %(message)s",
+        "%(levelname)8s | %(asctime)s | %(name)s | %(filename)s:%(funcName)25s | Line# %(lineno)s | %(message)s",
         datefmt="%Y-%m-%dT%H:%M:%SZ",
     )
 
