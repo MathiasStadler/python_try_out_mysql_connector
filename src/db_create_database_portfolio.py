@@ -88,8 +88,10 @@ def init_logger():
     #     "%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 
     # nice log output
+    # FROM HERE
+    # https://stackoverflow.com/questions/20618570/python-logging-formatter-is-there-any-way-to-fix-the-width-of-a-field-and-jus
     formatter = logging.Formatter(
-        "%(levelname)s | %(asctime)s |%(name)s |%(filename)s:%(funcName)s :Line %(lineno)s| %(message)s",
+        "%(levelname)8s | %(asctime)s | %(name)s | %(filename)s:%(funcName)25s | Line %(lineno)s | %(message)s",
         datefmt="%Y-%m-%dT%H:%M:%SZ",
     )
 
@@ -105,6 +107,8 @@ def init_logger():
     log.debug("start")
     log.debug("finished")
     return log
+
+
 
 
 # connect mysql-server
@@ -310,21 +314,21 @@ def run():
             else:
                 log.info("Table create result {}".format(result))
 
-        # # next table 
-        # table_name = "options"
-        # result = table_check_available(cnx, table_name)
+        # next table 
+        table_name = "options"
+        result = table_check_available(cnx, table_name)
 
-        # if result:
-        #     log.info("Table available => {}".format(result))
-        # else:
-        #     log.info("Table not available => create it now ;-)")
-        #     table_create(cnx, table_name)
-
-        # if result:
-        #     log.info("Table available => {}".format(result))
-        # else:
-        #     log.info("Table not available => create it now ;-)")
-        #     table_create(cnx, table_name)
+        if result:
+            log.info("Table available => {}".format(result))
+        else:
+            log.info("Table not available => create it now ;-)")
+            table_create(cnx, table_name)
+ 
+        if result:
+            log.info("Table available => {}".format(result))
+        else:
+            log.info("Table not available => create it now ;-)")
+            table_create(cnx, table_name)
 
         # db_disconnect(cnx)
 
