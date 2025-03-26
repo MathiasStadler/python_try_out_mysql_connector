@@ -229,3 +229,101 @@ DEBUG | 2025-03-26T12:17:48Z |__main__ |db_create_database_portfolio.py:connect_
 DEBUG | 2025-03-26T12:17:48Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 86| start
 INFO | 2025-03-26T12:17:48Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 88| db is connected
 ERROR | 2025-03-26T12:17:48Z |__main__ |db_create_database_portfolio.py:run :Line 126| An error occurred: {}
+DEBUG | 2025-03-26T13:22:49Z |__main__ |db_create_database_portfolio.py:init_logger :Line 55| start
+DEBUG | 2025-03-26T13:22:49Z |__main__ |db_create_database_portfolio.py:init_logger :Line 56| finished
+DEBUG | 2025-03-26T13:22:49Z |__main__ |db_create_database_portfolio.py:<module> :Line 135| program call direct
+INFO | 2025-03-26T13:22:49Z |__main__ |db_create_database_portfolio.py:<module> :Line 136| Start Program
+INFO | 2025-03-26T13:22:49Z |__main__ |db_create_database_portfolio.py:run :Line 116| init mysql connection
+DEBUG | 2025-03-26T13:22:49Z |__main__ |db_create_database_portfolio.py:connect_mysql_server_local :Line 66| RETURN successful connection
+DEBUG | 2025-03-26T13:22:49Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 86| start
+INFO | 2025-03-26T13:22:49Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 88| db is connected
+ERROR | 2025-03-26T13:22:49Z |__main__ |db_create_database_portfolio.py:run :Line 123| An error occurred: {}
+DEBUG | 2025-03-26T13:33:54Z |__main__ |db_create_database_portfolio.py:init_logger :Line 55| start
+DEBUG | 2025-03-26T13:33:54Z |__main__ |db_create_database_portfolio.py:init_logger :Line 56| finished
+DEBUG | 2025-03-26T13:33:54Z |__main__ |db_create_database_portfolio.py:<module> :Line 142| program call direct
+INFO | 2025-03-26T13:33:54Z |__main__ |db_create_database_portfolio.py:<module> :Line 143| Start Program
+INFO | 2025-03-26T13:33:54Z |__main__ |db_create_database_portfolio.py:run :Line 123| init mysql connection
+DEBUG | 2025-03-26T13:33:54Z |__main__ |db_create_database_portfolio.py:connect_mysql_server_local :Line 66| RETURN successful connection
+DEBUG | 2025-03-26T13:33:54Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 86| start
+INFO | 2025-03-26T13:33:54Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 88| db is connected
+ERROR | 2025-03-26T13:33:54Z |__main__ |db_create_database_portfolio.py:run :Line 130| An error occurred: {}
+DEBUG | 2025-03-26T13:34:59Z |__main__ |db_create_database_portfolio.py:init_logger :Line 55| start
+DEBUG | 2025-03-26T13:34:59Z |__main__ |db_create_database_portfolio.py:init_logger :Line 56| finished
+DEBUG | 2025-03-26T13:34:59Z |__main__ |db_create_database_portfolio.py:<module> :Line 142| program call direct
+INFO | 2025-03-26T13:34:59Z |__main__ |db_create_database_portfolio.py:<module> :Line 143| Start Program
+INFO | 2025-03-26T13:34:59Z |__main__ |db_create_database_portfolio.py:run :Line 123| init mysql connection
+DEBUG | 2025-03-26T13:34:59Z |__main__ |db_create_database_portfolio.py:connect_mysql_server_local :Line 66| RETURN successful connection
+DEBUG | 2025-03-26T13:34:59Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 86| start
+INFO | 2025-03-26T13:34:59Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 88| db is connected
+ERROR | 2025-03-26T13:34:59Z |__main__ |db_create_database_portfolio.py:run :Line 130| An error occurred: {}
+DEBUG | 2025-03-26T13:36:36Z |__main__ |db_create_database_portfolio.py:init_logger :Line 55| start
+DEBUG | 2025-03-26T13:36:36Z |__main__ |db_create_database_portfolio.py:init_logger :Line 56| finished
+DEBUG | 2025-03-26T13:36:36Z |__main__ |db_create_database_portfolio.py:<module> :Line 142| program call direct
+INFO | 2025-03-26T13:36:36Z |__main__ |db_create_database_portfolio.py:<module> :Line 143| Start Program
+INFO | 2025-03-26T13:36:36Z |__main__ |db_create_database_portfolio.py:run :Line 123| init mysql connection
+DEBUG | 2025-03-26T13:36:36Z |__main__ |db_create_database_portfolio.py:connect_mysql_server_local :Line 66| RETURN successful connection
+DEBUG | 2025-03-26T13:36:36Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 86| start
+INFO | 2025-03-26T13:36:36Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 88| db is connected
+ERROR | 2025-03-26T13:36:36Z |__main__ |db_create_database_portfolio.py:run :Line 130| An error occurred: 'Logger' object has no attribute 'err'
+INFO | 2025-03-26T13:36:36Z |__main__ |db_create_database_portfolio.py:<module> :Line 145| Finish Prg
+DEBUG | 2025-03-26T13:37:04Z |__main__ |db_create_database_portfolio.py:init_logger :Line 55| start
+DEBUG | 2025-03-26T13:37:04Z |__main__ |db_create_database_portfolio.py:init_logger :Line 56| finished
+DEBUG | 2025-03-26T13:37:04Z |__main__ |db_create_database_portfolio.py:<module> :Line 142| program call direct
+INFO | 2025-03-26T13:37:04Z |__main__ |db_create_database_portfolio.py:<module> :Line 143| Start Program
+INFO | 2025-03-26T13:37:04Z |__main__ |db_create_database_portfolio.py:run :Line 123| init mysql connection
+DEBUG | 2025-03-26T13:37:04Z |__main__ |db_create_database_portfolio.py:connect_mysql_server_local :Line 66| RETURN successful connection
+DEBUG | 2025-03-26T13:37:04Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 86| start
+INFO | 2025-03-26T13:37:04Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 88| db is connected
+ERROR | 2025-03-26T13:37:04Z |__main__ |db_create_database_portfolio.py:run :Line 130| An error occurred: 'Logger' object has no attribute 'err'
+INFO | 2025-03-26T13:37:04Z |__main__ |db_create_database_portfolio.py:<module> :Line 145| Finish Prg
+DEBUG | 2025-03-26T13:40:02Z |__main__ |db_create_database_portfolio.py:init_logger :Line 55| start
+DEBUG | 2025-03-26T13:40:02Z |__main__ |db_create_database_portfolio.py:init_logger :Line 56| finished
+DEBUG | 2025-03-26T13:40:02Z |__main__ |db_create_database_portfolio.py:<module> :Line 142| program call direct
+INFO | 2025-03-26T13:40:02Z |__main__ |db_create_database_portfolio.py:<module> :Line 143| Start Program
+INFO | 2025-03-26T13:40:02Z |__main__ |db_create_database_portfolio.py:run :Line 123| init mysql connection
+DEBUG | 2025-03-26T13:40:02Z |__main__ |db_create_database_portfolio.py:connect_mysql_server_local :Line 66| RETURN successful connection
+DEBUG | 2025-03-26T13:40:02Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 86| start
+INFO | 2025-03-26T13:40:02Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 88| db is connected
+ERROR | 2025-03-26T13:40:02Z |__main__ |db_create_database_portfolio.py:run :Line 130| An error occurred: 'Logger' object has no attribute 'err'
+INFO | 2025-03-26T13:40:02Z |__main__ |db_create_database_portfolio.py:<module> :Line 145| Finish Prg
+DEBUG | 2025-03-26T13:41:55Z |__main__ |db_create_database_portfolio.py:init_logger :Line 55| start
+DEBUG | 2025-03-26T13:41:55Z |__main__ |db_create_database_portfolio.py:init_logger :Line 56| finished
+DEBUG | 2025-03-26T13:41:55Z |__main__ |db_create_database_portfolio.py:<module> :Line 143| program call direct
+INFO | 2025-03-26T13:41:55Z |__main__ |db_create_database_portfolio.py:<module> :Line 144| Start Program
+INFO | 2025-03-26T13:41:55Z |__main__ |db_create_database_portfolio.py:run :Line 123| init mysql connection
+DEBUG | 2025-03-26T13:41:55Z |__main__ |db_create_database_portfolio.py:connect_mysql_server_local :Line 66| RETURN successful connection
+DEBUG | 2025-03-26T13:41:55Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 86| start
+INFO | 2025-03-26T13:41:55Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 88| db is connected
+ERROR | 2025-03-26T13:41:55Z |__main__ |db_create_database_portfolio.py:run :Line 131| An error occurred: 'Logger' object has no attribute 'err'
+INFO | 2025-03-26T13:41:55Z |__main__ |db_create_database_portfolio.py:<module> :Line 146| Finish Prg
+DEBUG | 2025-03-26T13:43:52Z |__main__ |db_create_database_portfolio.py:init_logger :Line 55| start
+DEBUG | 2025-03-26T13:43:52Z |__main__ |db_create_database_portfolio.py:init_logger :Line 56| finished
+DEBUG | 2025-03-26T13:43:52Z |__main__ |db_create_database_portfolio.py:<module> :Line 143| program call direct
+INFO | 2025-03-26T13:43:52Z |__main__ |db_create_database_portfolio.py:<module> :Line 144| Start Program
+INFO | 2025-03-26T13:43:52Z |__main__ |db_create_database_portfolio.py:run :Line 123| init mysql connection
+DEBUG | 2025-03-26T13:43:52Z |__main__ |db_create_database_portfolio.py:connect_mysql_server_local :Line 66| RETURN successful connection
+DEBUG | 2025-03-26T13:43:52Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 86| start
+INFO | 2025-03-26T13:43:52Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 88| db is connected
+INFO | 2025-03-26T13:43:52Z |__main__ |db_create_database_portfolio.py:<module> :Line 146| Finish Prg
+DEBUG | 2025-03-26T13:45:17Z |__main__ |db_create_database_portfolio.py:init_logger :Line 55| start
+DEBUG | 2025-03-26T13:45:17Z |__main__ |db_create_database_portfolio.py:init_logger :Line 56| finished
+DEBUG | 2025-03-26T13:45:17Z |__main__ |db_create_database_portfolio.py:<module> :Line 143| program call direct
+INFO | 2025-03-26T13:45:17Z |__main__ |db_create_database_portfolio.py:<module> :Line 144| Start Program
+INFO | 2025-03-26T13:45:17Z |__main__ |db_create_database_portfolio.py:run :Line 123| init mysql connection
+DEBUG | 2025-03-26T13:45:17Z |__main__ |db_create_database_portfolio.py:connect_mysql_server_local :Line 66| RETURN successful connection
+DEBUG | 2025-03-26T13:45:17Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 86| start
+INFO | 2025-03-26T13:45:17Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 88| db is connected
+ERROR | 2025-03-26T13:45:17Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 106| Database error
+DEBUG | 2025-03-26T13:45:17Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 118| finished
+INFO | 2025-03-26T13:45:17Z |__main__ |db_create_database_portfolio.py:<module> :Line 146| Finish Prg
+DEBUG | 2025-03-26T13:46:07Z |__main__ |db_create_database_portfolio.py:init_logger :Line 55| start
+DEBUG | 2025-03-26T13:46:07Z |__main__ |db_create_database_portfolio.py:init_logger :Line 56| finished
+DEBUG | 2025-03-26T13:46:07Z |__main__ |db_create_database_portfolio.py:<module> :Line 143| program call direct
+INFO | 2025-03-26T13:46:07Z |__main__ |db_create_database_portfolio.py:<module> :Line 144| Start Program
+INFO | 2025-03-26T13:46:07Z |__main__ |db_create_database_portfolio.py:run :Line 123| init mysql connection
+DEBUG | 2025-03-26T13:46:07Z |__main__ |db_create_database_portfolio.py:connect_mysql_server_local :Line 66| RETURN successful connection
+DEBUG | 2025-03-26T13:46:07Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 86| start
+INFO | 2025-03-26T13:46:07Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 88| db is connected
+ERROR | 2025-03-26T13:46:07Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 106| Database error => 1049 (42000): Unknown database 'portfolio'
+DEBUG | 2025-03-26T13:46:07Z |__main__ |db_create_database_portfolio.py:db_check_available :Line 118| finished
+INFO | 2025-03-26T13:46:07Z |__main__ |db_create_database_portfolio.py:<module> :Line 146| Finish Prg

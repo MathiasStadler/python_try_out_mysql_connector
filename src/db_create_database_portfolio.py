@@ -89,20 +89,27 @@ def db_check_available(cnx,database_name):
 
         with cnx.cursor() as cursor:
 
+# FROM HERE
+# https://www.w3schools.com/python/python_mysql_create_db.asp
             try:
                 cursor.execute("USE {}".format(DB_NAME))
                 log.info("Database {} does exists.".format(DB_NAME))
 
+                cursor.execute("SHOW DATABASES")
+
+                for x in cursor:
+                    log.info("Follow database available {}").format(x)
+
             except mysql.connector.Error as err:
                 
                 if err.errno == errorcode.ER_BAD_DB_ERROR:
-                    log.err("Database {} does not exists.".format(database_name))
-                    return False
+                    log.error("Database error => {}".format(err))
+                    # return False
                     # create_database(cursor)
                     # log.info("Database {} created successfully.".format(DB_NAME))
                     # cnx.database = DB_NAME
                 else:
-                    print(err)
+                    log.error("Another err => {}".format(err))
                     exit(1)
 
             else:
@@ -110,9 +117,6 @@ def db_check_available(cnx,database_name):
             
     log.debug("finished")
     
-    
-
-
 def run():
 
     try:
@@ -120,11 +124,12 @@ def run():
         # config see on start this files
         cnx = connect_mysql_server_local(config)
         
-        log.info("check db => {}".format(db_check_available(cnx,DB_NAME)))
+        # log.info("check db => {}".format(db_check_available(cnx,DB_NAME)))
+        db_check_available(cnx,DB_NAME)
 
     except Exception as e:
-        log.error("An error occurred: {}").format(e)
-
+        log.error("An error occurred: {}".format(e))
+        
     return None
 
 
