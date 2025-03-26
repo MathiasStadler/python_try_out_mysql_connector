@@ -8,6 +8,12 @@ import mysql.connector
 
 DB_NAME = 'portfolio'
 
+
+
+
+# e.g.
+# https://dev.mysql.com/doc/connector-python/en/connector-python-example-ddl.html
+
 TABLES = {}
 TABLES['positions'] = (
     "CREATE TABLE `position` ("
@@ -17,9 +23,39 @@ TABLES['positions'] = (
     "  PRIMARY KEY (`no`)"
     ") ENGINE=InnoDB")
 
+TABLES['positions'] = (
+    "CREATE TABLE `position` ("
+    " `no` int NOT NULL AUTO_INCREMENT,"
+    " `contract` enum('STK','OPT') NOT NULL,"
+    " `strike` DECIMAL(6, 6) NOT NULL,"
+    "  PRIMARY KEY (`no`)"
+    ") ENGINE=InnoDB") 
+
 TABLES['positions_temp'] = (
     "CREATE TABLE `position` ("
     " `no` int NOT NULL AUTO_INCREMENT,"
+    "  PRIMARY KEY (`no`)"
+    ") ENGINE=InnoDB")
+
+# Option(
+# conId=763248479,
+# symbol='WSM', 
+# lastTradeDateOrContractMonth='20250417', 
+# strike=150.0, 
+# right='P', 
+# multiplier='100', 
+# primaryExchange='AMEX', 
+# currency='USD', 
+# localSymbol='WSM   250417P00150000', 
+# tradingClass='WSM')
+# ]
+
+TABLES['options'] = (
+    "CREATE TABLE `options` ("
+    " `no` int NOT NULL AUTO_INCREMENT,"
+    " `conId` int NOT NULL,"
+    " `symbol`varchar(8) NOT NULL,"
+    " `lastTradeDateOrContractMonth` date NOT NULL,"
     "  PRIMARY KEY (`no`)"
     ") ENGINE=InnoDB")
 
