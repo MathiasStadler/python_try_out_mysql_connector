@@ -53,9 +53,16 @@ TABLES['positions_temp'] = (
 TABLES['options'] = (
     "CREATE TABLE `options` ("
     " `no` int NOT NULL AUTO_INCREMENT,"
-    " `conId` int NOT NULL,"
-    " `symbol`varchar(8) NOT NULL,"
-    " `lastTradeDateOrContractMonth` date NOT NULL,"
+  #  " `conId` int NOT NULL,"
+  #  " `symbol` varchar(8) NOT NULL,"
+  #  " `lastTradeDateOrContractMonth` date NOT NULL,"
+  #  " `strike` DECIMAL(6, 6) NOT NULL,"
+  #  " `right` enum('C','P') NOT NULL,"
+  #  " `multiplier`int NOT NULL,"
+  #  " `primaryExchange` varchar(8) NOT NULL,"
+  #  " `currency` varchar(3) NOT NULL ,"
+  #  " `localSymbol' varchar(8) NOT NULL ,"
+  #  " `tradingClass` varchar(8) NOT NULL ,"
     "  PRIMARY KEY (`no`)"
     ") ENGINE=InnoDB")
 
@@ -175,16 +182,16 @@ def db_check_available(cnx, database_name):
                 # Don't find the database
                 return result
 
-            except mysql.connector.Error as err:
+            except mysql.connector.Error as err_one:
 
-                if err.errno == errorcode.ER_BAD_DB_ERROR:
-                    log.error("Database error => {}".format(err))
+                if err_one.errno == errorcode.ER_BAD_DB_ERROR:
+                    log.error("Database error => {}".format(err_one))
                     # return False
                     # create_database(cursor)
                     # log.info("Database {} created successfully.".format(DB_NAME))
                     # cnx.database = DB_NAME
                 else:
-                    log.error("Another err => {}".format(err))
+                    log.error("Another err_one => {}".format(err_one))
                     exit(1)
 
             else:
@@ -257,14 +264,14 @@ def table_create(cnx, table_name):
             
             for x in cursor:
                 print(x)
-        except mysql.connector.Error as err:
-            if err.errno == errorcode.ER_TABLE_EXISTS_ERROR:
+        except mysql.connector.Error as err_local:
+            if err_local.errno == errorcode.ER_TABLE_EXISTS_ERROR:
                 log.error(
                     "database table already exists => {} - Check before you are create twice".format(table_name))
             else:
-                log.error("Err {}".format(err))
+                log.error("Err {}".format(err_local))
         else:
-            print(err.msg)
+            print(err_local.msg)
 
 
 def run():
@@ -287,13 +294,37 @@ def run():
 
         table_name = "positions"
 
-        result = table_check_available(cnx, "portfolio")
+        # result = table_check_available(cnx, "portfolio")
+        result = table_check_available(cnx, table_name)
 
         if result:
             log.info("Table available => {}".format(result))
         else:
             log.info("Table not available => create it now ;-)")
-            table_create(cnx, table_name)
+            
+            # crete table
+            result = table_create(cnx, table_name)
+
+            if result:
+                 log.info("Table available => {}".format(result))
+            else:
+                log.info("Table create result {}".format(result))
+
+        # # next table 
+        # table_name = "options"
+        # result = table_check_available(cnx, table_name)
+
+        # if result:
+        #     log.info("Table available => {}".format(result))
+        # else:
+        #     log.info("Table not available => create it now ;-)")
+        #     table_create(cnx, table_name)
+
+        # if result:
+        #     log.info("Table available => {}".format(result))
+        # else:
+        #     log.info("Table not available => create it now ;-)")
+        #     table_create(cnx, table_name)
 
         # db_disconnect(cnx)
 
