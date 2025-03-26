@@ -5,13 +5,19 @@ import time
 import mysql.connector
 
 TABLES = {}
-TABLES['positions'] = (
+TABLES['positions_one'] = (
     "CREATE TABLE `position` ("
     " `no` int(11) NOT NULL AUTO_INCREMENT,"
     " `contract` enum('STK','OPT') NOT NULL,"
     " `strike` long(11) NOT NULL,"
     "  PRIMARY KEY (`no`)"
     ") ENGINE=InnoDB")
+
+TABLES['positions'] = (
+    "CREATE TABLE `position` ("
+    " `no` int(11) NOT NULL AUTO_INCREMENT,"
+    "  PRIMARY KEY (`no`)"
+    " ENGINE=InnoDB")
 
 from mysql.connector import errorcode
 
@@ -53,7 +59,7 @@ def connect_to_mysql(config, attempts=3, delay=2):
             time.sleep(delay ** attempt)
             attempt += 1
     return None
-
+) ENGINE=InnoDB
 
 def create_database(cursor):
     try:
