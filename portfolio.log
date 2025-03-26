@@ -40,3 +40,63 @@
 2025-03-26 09:25:12,873 - __main__ - INFO - Start Program
 2025-03-26 09:25:12,873 - __main__ - INFO - init mysql connection
 2025-03-26 09:25:12,914 - __main__ - INFO - Finish Prg
+DEBUG | 2025-03-26T09:44:34Z | start init_logger
+DEBUG | 2025-03-26T09:44:34Z | finished init_logger
+DEBUG | 2025-03-26T09:44:34Z | program call direct
+INFO | 2025-03-26T09:44:34Z | Start Program
+INFO | 2025-03-26T09:44:34Z | init mysql connection
+INFO | 2025-03-26T09:44:34Z | Finish Prg
+DEBUG | 2025-03-26T09:47:51Z |__main__ | start init_logger
+DEBUG | 2025-03-26T09:47:51Z |__main__ | finished init_logger
+DEBUG | 2025-03-26T09:47:51Z |__main__ | program call direct
+INFO | 2025-03-26T09:47:51Z |__main__ | Start Program
+INFO | 2025-03-26T09:47:51Z |__main__ | init mysql connection
+INFO | 2025-03-26T09:47:51Z |__main__ | Finish Prg
+DEBUG | 2025-03-26T09:48:57Z |__main__ |db_create_database_portfolio.py:52| start init_logger
+DEBUG | 2025-03-26T09:48:57Z |__main__ |db_create_database_portfolio.py:53| finished init_logger
+DEBUG | 2025-03-26T09:48:57Z |__main__ |db_create_database_portfolio.py:102| program call direct
+INFO | 2025-03-26T09:48:57Z |__main__ |db_create_database_portfolio.py:103| Start Program
+INFO | 2025-03-26T09:48:57Z |__main__ |db_create_database_portfolio.py:85| init mysql connection
+INFO | 2025-03-26T09:48:57Z |__main__ |db_create_database_portfolio.py:105| Finish Prg
+DEBUG | 2025-03-26T11:25:34Z |__main__ |db_create_database_portfolio.py:52| start init_logger
+DEBUG | 2025-03-26T11:25:34Z |__main__ |db_create_database_portfolio.py:53| finished init_logger
+DEBUG | 2025-03-26T11:25:34Z |__main__ |db_create_database_portfolio.py:102| program call direct
+INFO | 2025-03-26T11:25:34Z |__main__ |db_create_database_portfolio.py:103| Start Program
+INFO | 2025-03-26T11:25:34Z |__main__ |db_create_database_portfolio.py:85| init mysql connection
+INFO | 2025-03-26T11:25:34Z |__main__ |db_create_database_portfolio.py:105| Finish Prg
+DEBUG | 2025-03-26T11:26:28Z |__main__ |db_create_database_portfolio.pyinit_logger:52| start init_logger
+DEBUG | 2025-03-26T11:26:28Z |__main__ |db_create_database_portfolio.pyinit_logger:53| finished init_logger
+DEBUG | 2025-03-26T11:26:28Z |__main__ |db_create_database_portfolio.py<module>:102| program call direct
+INFO | 2025-03-26T11:26:28Z |__main__ |db_create_database_portfolio.py<module>:103| Start Program
+INFO | 2025-03-26T11:26:28Z |__main__ |db_create_database_portfolio.pyrun:85| init mysql connection
+INFO | 2025-03-26T11:26:29Z |__main__ |db_create_database_portfolio.py<module>:105| Finish Prg
+DEBUG | 2025-03-26T11:27:32Z |__main__ |db_create_database_portfolio.py|init_logger:52| start init_logger
+DEBUG | 2025-03-26T11:27:32Z |__main__ |db_create_database_portfolio.py|init_logger:53| finished init_logger
+DEBUG | 2025-03-26T11:27:32Z |__main__ |db_create_database_portfolio.py|<module>:102| program call direct
+INFO | 2025-03-26T11:27:32Z |__main__ |db_create_database_portfolio.py|<module>:103| Start Program
+INFO | 2025-03-26T11:27:32Z |__main__ |db_create_database_portfolio.py|run:85| init mysql connection
+INFO | 2025-03-26T11:27:32Z |__main__ |db_create_database_portfolio.py|<module>:105| Finish Prg
+DEBUG | 2025-03-26T11:28:13Z |__main__ |db_create_database_portfolio.py:init_logger:52| start init_logger
+DEBUG | 2025-03-26T11:28:13Z |__main__ |db_create_database_portfolio.py:init_logger:53| finished init_logger
+DEBUG | 2025-03-26T11:28:13Z |__main__ |db_create_database_portfolio.py:<module>:102| program call direct
+INFO | 2025-03-26T11:28:13Z |__main__ |db_create_database_portfolio.py:<module>:103| Start Program
+INFO | 2025-03-26T11:28:13Z |__main__ |db_create_database_portfolio.py:run:85| init mysql connection
+INFO | 2025-03-26T11:28:13Z |__main__ |db_create_database_portfolio.py:<module>:105| Finish Prg
+DEBUG | 2025-03-26T11:28:40Z |__main__ |db_create_database_portfolio.py:init_logger(52)| start init_logger
+DEBUG | 2025-03-26T11:28:40Z |__main__ |db_create_database_portfolio.py:init_logger(53)| finished init_logger
+DEBUG | 2025-03-26T11:28:40Z |__main__ |db_create_database_portfolio.py:<module>(102)| program call direct
+INFO | 2025-03-26T11:28:40Z |__main__ |db_create_database_portfolio.py:<module>(103)| Start Program
+INFO | 2025-03-26T11:28:40Z |__main__ |db_create_database_portfolio.py:run(85)| init mysql connection
+INFO | 2025-03-26T11:28:40Z |__main__ |db_create_database_portfolio.py:<module>(105)| Finish Prg
+DEBUG | 2025-03-26T11:29:07Z |__main__ |db_create_database_portfolio.py:def init_logger(52)| start init_logger
+DEBUG | 2025-03-26T11:29:07Z |__main__ |db_create_database_portfolio.py:def init_logger(53)| finished init_logger
+DEBUG | 2025-03-26T11:29:07Z |__main__ |db_create_database_portfolio.py:def <module>(102)| program call direct
+INFO | 2025-03-26T11:29:07Z |__main__ |db_create_database_portfolio.py:def <module>(103)| Start Program
+INFO | 2025-03-26T11:29:07Z |__main__ |db_create_database_portfolio.py:def run(85)| init mysql connection
+INFO | 2025-03-26T11:29:08Z |__main__ |db_create_database_portfolio.py:def <module>(105)| Finish Prg
+DEBUG | 2025-03-26T11:30:05Z |__main__ |db_create_database_portfolio.py:def init_logger Line 52| start init_logger
+DEBUG | 2025-03-26T11:30:05Z |__main__ |db_create_database_portfolio.py:def init_logger Line 53| finished init_logger
+DEBUG | 2025-03-26T11:30:05Z |__main__ |db_create_database_portfolio.py:def <module> Line 102| program call direct
+INFO | 2025-03-26T11:30:05Z |__main__ |db_create_database_portfolio.py:def <module> Line 103| Start Program
+INFO | 2025-03-26T11:30:05Z |__main__ |db_create_database_portfolio.py:def run Line 85| init mysql connection
+INFO | 2025-03-26T11:30:05Z |__main__ |db_create_database_portfolio.py:def <module> Line 105| Finish Prg

@@ -30,8 +30,15 @@ def init_logger():
     # Setup logger
     log = logging.getLogger(__name__)
     log.setLevel(logging.DEBUG)
+
+    # formatter = logging.Formatter(
+    #     "%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+
+    # nice log output
     formatter = logging.Formatter(
-        "%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+        "%(levelname)s | %(asctime)s |%(name)s |%(filename)s:def %(funcName)s Line %(lineno)s| %(message)s",
+        datefmt="%Y-%m-%dT%H:%M:%SZ",
+    )
 
     # Log to console
     handler = logging.StreamHandler()
