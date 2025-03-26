@@ -2,8 +2,11 @@ from __future__ import print_function
 from mysql.connector import errorcode
 
 import logging
+
 import time
 import mysql.connector
+
+DB_NAME = 'portfolio'
 
 TABLES = {}
 TABLES['positions'] = (
@@ -36,7 +39,7 @@ def init_logger():
 
     # nice log output
     formatter = logging.Formatter(
-        "%(levelname)s | %(asctime)s |%(name)s |%(filename)s:def %(funcName)s Line %(lineno)s| %(message)s",
+        "%(levelname)s | %(asctime)s |%(name)s |%(filename)s:%(funcName)s :Line %(lineno)s| %(message)s",
         datefmt="%Y-%m-%dT%H:%M:%SZ",
     )
 
@@ -49,8 +52,8 @@ def init_logger():
     file_handler = logging.FileHandler("portfolio.log")
     file_handler.setFormatter(formatter)
     log.addHandler(file_handler)
-    log.debug("start init_logger")
-    log.debug("finished init_logger")
+    log.debug("start")
+    log.debug("finished")
     return log
 
 
@@ -60,6 +63,7 @@ def connect_mysql_server_local(config, attempts=3, delay=2):
     # Implement a reconnection routine
     while attempt < attempts + 1:
         try:
+            log.debug("RETURN successful connection")
             return mysql.connector.connect(**config)
         except (mysql.connector.Error, IOError) as err:
             if (attempts is attempt):
@@ -78,16 +82,48 @@ def connect_mysql_server_local(config, attempts=3, delay=2):
             attempt += 1
     return None
 
+def db_check_available(cnx,database_name):
+    log.debug("start")
+    if cnx and cnx.is_connected():
+        log.info("db is connected")
+
+        with cnx.cursor() as cursor:
+
+            try:
+                cursor.execute("USE {}".format(DB_NAME))
+                log.info("Database {} does exists.".format(DB_NAME))
+
+            except mysql.connector.Error as err:
+                
+                if err.errno == errorcode.ER_BAD_DB_ERROR:
+                    log.err("Database {} does not exists.".format(database_name))
+                    return False
+                    # create_database(cursor)
+                    # log.info("Database {} created successfully.".format(DB_NAME))
+                    # cnx.database = DB_NAME
+                else:
+                    print(err)
+                    exit(1)
+
+            else:
+                return True
+            
+    log.debug("finished")
+    
+    
+
 
 def run():
 
     try:
         log.info("init mysql connection")
         # config see on start this files
-        connect_mysql_server_local(config)
+        cnx = connect_mysql_server_local(config)
+        
+        log.info("check db => {}".format(db_check_available(cnx,DB_NAME)))
 
     except Exception as e:
-        print(f"An error occurred: {e}")
+        log.error("An error occurred: {}").format(e)
 
     return None
 
