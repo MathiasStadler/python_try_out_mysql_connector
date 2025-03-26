@@ -96,6 +96,7 @@ if __name__ == "__main__":
         log.info("Start Program")
         run()
         log.info("Finish Prg")
+        exit(0)
     except Exception as e:
         print(f"An error occurred: {e}")
 else:
