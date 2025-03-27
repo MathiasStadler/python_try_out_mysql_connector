@@ -81,10 +81,7 @@ def init_logger():
     # Setup logger
     log = logging.getLogger(__name__)
     log.setLevel(logging.DEBUG)
-
-    # formatter = logging.Formatter(
-    #     "%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-
+   
     # nice log output
     # FROM HERE
     # https://stackoverflow.com/questions/20618570/python-logging-formatter-is-there-any-way-to-fix-the-width-of-a-field-and-jus
@@ -114,7 +111,6 @@ def connect_mysql_server_local(config, attempts=3, delay=2):
     while attempt < attempts + 1:
         try:
             log.debug("RETURN successful connection")
-
             return mysql.connector.connect(**config)
         except (mysql.connector.Error, IOError) as err:
             if (attempts is attempt):
@@ -133,21 +129,16 @@ def connect_mysql_server_local(config, attempts=3, delay=2):
             attempt += 1
     return None
 
-
 def db_disconnect(cnx):
-
     # FROM HERE
     # https://dev.mysql.com/doc/connector-python/en/connector-python-api-mysqlconnection-shutdown.html
     # Unlike disconnect(), shutdown() closes the client connection
     # without attempting to send a QUIT command to the server first.
     #  Thus, it will not block if the connection is disrupted
     # for some reason such as network failure.
-
     try:
-
         log.info("call disconnect")
         cnx.close()
-
     except (mysql.connector.Error, IOError) as err:
         log.info(
             "Disconnection/Shutdown connection %s. Retrying (%d/%d)...",
@@ -161,33 +152,24 @@ def db_disconnect(cnx):
         log.error("An error => {} occurred line:#{}".format(
             e, e.__traceback__.tb_lineno))
 
-
 def db_check_available(cnx, database_name):
-
     log.debug("start")
     if cnx and cnx.is_connected():
         log.info("db is connected")
-
         with cnx.cursor() as cursor:
-
             # FROM HERE
             # https://www.w3schools.com/python/python_mysql_create_db.asp
             try:
                 cursor.execute("SHOW DATABASES")
-
                 # check if available
                 result = False
-
                 for x in cursor:
                     log.info("Follow database available {}".format(x))
                     if database_name in x:
                         result = True
-
                 # Don't find the database
                 return result
-
             except mysql.connector.Error as err_one:
-
                 if err_one.errno == errorcode.ER_BAD_DB_ERROR:
                     log.error("Database error => {}".format(err_one))
                 else:
@@ -198,15 +180,12 @@ def db_check_available(cnx, database_name):
             except Exception as e:
                 log.error("An error => {} occurred line:#{}".format(
                     e, e.__traceback__.tb_lineno))
-
             else:
                 return True
-
     log.debug("finished")
 
 
 def create_database(cnx, db_name):
-
     with cnx.cursor() as cursor:
         try:
             log.info("create database {}".format(DB_NAME))
@@ -228,30 +207,22 @@ def table_check_available(cnx, table_name):
     log.debug("start")
     if cnx and cnx.is_connected():
         log.info("db is connected")
-
         with cnx.cursor() as cursor:
-
             # FROM HERE
             # https://www.w3schools.com/python/python_mysql_create_db.asp
             try:
                 cursor.execute("USE {}".format(DB_NAME))
                 log.info("use database {} ".format(DB_NAME))
-
                 cursor.execute("SHOW TABLES")
-
                 # check if table available
                 result = False
-
                 for x in cursor:
                     log.info("Follow table available {}".format(x))
                     if table_name in x:
                         result = True
-
                 # Don't find the database
                 return result
-
             except mysql.connector.Error as err:
-
                 if err.errno == errorcode.ER_BAD_DB_ERROR:
                     log.error("Database error => {}".format(err))
                 else:
@@ -262,28 +233,22 @@ def table_check_available(cnx, table_name):
             except Exception as e:
                 log.error("An error => {} occurred line:#{}".format(
                     e, e.__traceback__.tb_lineno))
-
             else:
                 return True
-
     log.debug("finished")
 
 
 def table_create(cnx, table_name):
-
     with cnx.cursor() as cursor:
-
         table_description = TABLES[table_name]
         try:
             log.debug("Creating table {}: ".format(table_name))
             cursor.execute(table_description)
             cnx.commit()
-
             log.info("cursor output start")
             for x in cursor:
                 log.info("{}".format(x))
             log.info("cursor output finish")
-
         except mysql.connector.Error as err_local:
             if err_local.errno == errorcode.ER_TABLE_EXISTS_ERROR:
                 log.error(
@@ -296,29 +261,19 @@ def table_create(cnx, table_name):
         except Exception as e:
             log.error("An error => {} occurred line:#{}".format(
                 e, e.__traceback__.tb_lineno))
-
         else:
             return True
-            # print(err_local.msg)
-
 
 # creates all tables from struct TABLES
 def create_tables(cnx, database):
-    
     log.info(" start")
-    
     with cnx.cursor() as cursor:
-
         # switch to database
         try:
             cursor.execute("USE {}".format(DB_NAME))
         except Exception as e:
             log.error("An error => {} occurred line:#{}".format(
                 e, e.__traceback__.tb_lineno))
-
-        # switch to database
-
-       #  iterator = cursor.execute("USE {}".format(database))
         try:
             for table_name in TABLES:
                 table_description = TABLES[table_name]
@@ -329,13 +284,11 @@ def create_tables(cnx, database):
                         log.info("creating table {}: ".format(table_name))
                         cursor.execute(table_description)
                         cnx.commit()
-
                         # log cursor
                         log.info("cursor output start")
                         for x in cursor:
                             log.info("{}".format(x))
                         log.info("cursor output finish")
-
                 except mysql.connector.Error as err:
                     if err.errno == errorcode.ER_TABLE_EXISTS_ERROR:
                         # log.error("Error".format(err.msg))
@@ -345,86 +298,38 @@ def create_tables(cnx, database):
                 except Exception as e:
                     log.error("An error => {} occurred line:#{}".format(
                         e, e.__traceback__.tb_lineno))
-                # else:
-                    # print(err.msg)
             else:
                 return True
-
         except Exception as e:
             log.error("An error => {} occurred line:#{}".format(
                 e, e.__traceback__.tb_lineno))
 
 def run():
-
     try:
-
         log.info("init mysql connection")
         # config see on start this files
         cnx = connect_mysql_server_local(config)
-
         result = db_check_available(cnx, DB_NAME)
         log.info("database available => {}".format(result))
-
         if result:
             log.info("Database already available")
         else:
             log.info("Database => {} NOT available".format(DB_NAME))
-
             # create it now
             create_database(cnx, DB_NAME)
-
+        # create tables set inside dict see file head
         create_tables(cnx,DB_NAME)
-
-        # table_name = "positions"
-
-        # # result = table_check_available(cnx, "portfolio")
-        # result = table_check_available(cnx, table_name)
-
-        # if result:
-        #     log.info("Table available => {}".format(result))
-        # else:
-        #     log.info("Table not available => create it now ;-)")
-
-        #     # crete table
-        #     result = table_create(cnx, table_name)
-
-        #     if result:
-        #          log.info("Table available => {}".format(result))
-        #     else:
-        #         log.info("Table create result {}".format(result))
-
-        # # next table
-        # table_name = "options"
-        # result = table_check_available(cnx, table_name)
-
-        # if result:
-        #     log.info("Table available => {}".format(result))
-        # else:
-        #     log.info("Table not available => create it now ;-)")
-        #     table_create(cnx, table_name)
-
-        # if result:
-        #     log.info("Table available => {}".format(result))
-        # else:
-        #     log.info("Table not available => create it now ;-)")
-        #     table_create(cnx, table_name)
-
         db_disconnect(cnx)
-
     # FROM HERE last entry
     # https://stackoverflow.com/questions/1278705/when-i-catch-an-exception-how-do-i-get-the-type-file-and-line-number
     except Exception as e:
         log.error("An error => {} occurred line:#{}".format(
             e, e.__traceback__.tb_lineno))
-
     return None
-
 
 # main
 if __name__ == "__main__":
-
     # https://metana.io/blog/mastering-python-exception-handling-best-practices-for-try-except/
-
     try:
         log = init_logger()
         log.debug("program call direct")
