@@ -2799,3 +2799,336 @@ INFO | 2025-03-26T20:29:40Z |__main__ |db_create_database_portfolio.py:<module> 
    DEBUG | 2025-03-27T15:23:55Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
     INFO | 2025-03-27T15:23:55Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
     INFO | 2025-03-27T15:23:55Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+   DEBUG | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 105 | start
+   DEBUG | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 106 | finished
+   DEBUG | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 422 | program call direct
+    INFO | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 423 | start program
+    INFO | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:                      run | Line# 353 | init mysql connection
+   DEBUG | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:connect_mysql_server_local | Line# 116 | RETURN successful connection
+   DEBUG | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 167 | start
+    INFO | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 169 | db is connected
+    INFO | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('information_schema',)
+    INFO | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('mysql',)
+    INFO | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('performance_schema',)
+    INFO | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('sys',)
+    INFO | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:                      run | Line# 358 | database available => False
+    INFO | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:                      run | Line# 363 | Database => portfolio NOT available
+    INFO | 2025-03-27T15:39:14Z | __main__ | db_create_database_portfolio.py:          create_database | Line# 212 | create database portfolio
+    INFO | 2025-03-27T15:39:49Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 312 |  start
+   DEBUG | 2025-03-27T15:40:15Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T15:40:15Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T15:40:15Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+   DEBUG | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 105 | start
+   DEBUG | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 106 | finished
+   DEBUG | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 422 | program call direct
+    INFO | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 423 | start program
+    INFO | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:                      run | Line# 353 | init mysql connection
+   DEBUG | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:connect_mysql_server_local | Line# 116 | RETURN successful connection
+   DEBUG | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 167 | start
+    INFO | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 169 | db is connected
+    INFO | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('information_schema',)
+    INFO | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('mysql',)
+    INFO | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('performance_schema',)
+    INFO | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('portfolio',)
+    INFO | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('sys',)
+    INFO | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:                      run | Line# 358 | database available => True
+    INFO | 2025-03-27T15:41:04Z | __main__ | db_create_database_portfolio.py:                      run | Line# 361 | Database already available
+    INFO | 2025-03-27T15:41:10Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 312 |  start
+   DEBUG | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 105 | start
+   DEBUG | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 106 | finished
+   DEBUG | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 424 | program call direct
+    INFO | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 425 | start program
+    INFO | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:                      run | Line# 355 | init mysql connection
+   DEBUG | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:connect_mysql_server_local | Line# 116 | RETURN successful connection
+   DEBUG | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 167 | start
+    INFO | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 169 | db is connected
+    INFO | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('information_schema',)
+    INFO | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('mysql',)
+    INFO | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('performance_schema',)
+    INFO | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('portfolio',)
+    INFO | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('sys',)
+    INFO | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:                      run | Line# 360 | database available => True
+    INFO | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:                      run | Line# 363 | Database already available
+    INFO | 2025-03-27T15:41:45Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 308 |  start
+   DEBUG | 2025-03-27T15:42:13Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T15:42:13Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T15:42:13Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T15:42:38Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 330 | Creating table positions: 
+   DEBUG | 2025-03-27T15:42:49Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T15:42:49Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T15:42:49Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T15:42:49Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 246 | Follow table available ('position',)
+    INFO | 2025-03-27T15:42:51Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 330 | Creating table options: 
+    INFO | 2025-03-27T15:43:05Z | __main__ | db_create_database_portfolio.py:            db_disconnect | Line# 148 | call disconnect
+    INFO | 2025-03-27T15:43:22Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 427 | finished Prg
+   DEBUG | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 105 | start
+   DEBUG | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 106 | finished
+   DEBUG | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 424 | program call direct
+    INFO | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 425 | start program
+    INFO | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:                      run | Line# 355 | init mysql connection
+   DEBUG | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:connect_mysql_server_local | Line# 116 | RETURN successful connection
+   DEBUG | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 167 | start
+    INFO | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 169 | db is connected
+    INFO | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('information_schema',)
+    INFO | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('mysql',)
+    INFO | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('performance_schema',)
+    INFO | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('portfolio',)
+    INFO | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('sys',)
+    INFO | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:                      run | Line# 360 | database available => True
+    INFO | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:                      run | Line# 363 | Database already available
+    INFO | 2025-03-27T15:43:44Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 308 |  start
+   DEBUG | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 105 | start
+   DEBUG | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 106 | finished
+   DEBUG | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 425 | program call direct
+    INFO | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 426 | start program
+    INFO | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:                      run | Line# 356 | init mysql connection
+   DEBUG | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:connect_mysql_server_local | Line# 116 | RETURN successful connection
+   DEBUG | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 167 | start
+    INFO | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 169 | db is connected
+    INFO | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('information_schema',)
+    INFO | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('mysql',)
+    INFO | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('performance_schema',)
+    INFO | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('sys',)
+    INFO | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:                      run | Line# 361 | database available => False
+    INFO | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:                      run | Line# 366 | Database => portfolio NOT available
+    INFO | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:          create_database | Line# 212 | create database portfolio
+    INFO | 2025-03-27T17:51:02Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 308 |  start
+   DEBUG | 2025-03-27T17:51:25Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T17:51:25Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T17:51:25Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T17:51:28Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 333 | Creating table positions: 
+   DEBUG | 2025-03-27T17:51:53Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T17:51:53Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T17:51:53Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T17:51:53Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 246 | Follow table available ('position',)
+    INFO | 2025-03-27T17:52:00Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 333 | Creating table options: 
+    INFO | 2025-03-27T17:52:15Z | __main__ | db_create_database_portfolio.py:            db_disconnect | Line# 148 | call disconnect
+    INFO | 2025-03-27T17:52:28Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 428 | finished program
+   DEBUG | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 105 | start
+   DEBUG | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 106 | finished
+   DEBUG | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 425 | program call direct
+    INFO | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 426 | start program
+    INFO | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:                      run | Line# 356 | init mysql connection
+   DEBUG | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:connect_mysql_server_local | Line# 116 | RETURN successful connection
+   DEBUG | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 167 | start
+    INFO | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 169 | db is connected
+    INFO | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('information_schema',)
+    INFO | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('mysql',)
+    INFO | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('performance_schema',)
+    INFO | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('sys',)
+    INFO | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:                      run | Line# 361 | database available => False
+    INFO | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:                      run | Line# 366 | Database => portfolio NOT available
+    INFO | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:          create_database | Line# 212 | create database portfolio
+    INFO | 2025-03-27T17:55:42Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 308 |  start
+   DEBUG | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 105 | start
+   DEBUG | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 106 | finished
+   DEBUG | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 424 | program call direct
+    INFO | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 425 | start program
+    INFO | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:                      run | Line# 355 | init mysql connection
+   DEBUG | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:connect_mysql_server_local | Line# 116 | RETURN successful connection
+   DEBUG | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 167 | start
+    INFO | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 169 | db is connected
+    INFO | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('information_schema',)
+    INFO | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('mysql',)
+    INFO | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('performance_schema',)
+    INFO | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('portfolio',)
+    INFO | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('sys',)
+    INFO | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:                      run | Line# 360 | database available => True
+    INFO | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:                      run | Line# 363 | Database already available
+    INFO | 2025-03-27T17:56:27Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 308 |  start
+   DEBUG | 2025-03-27T17:57:19Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T17:57:19Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T17:57:19Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T17:57:24Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 332 | Creating table positions: 
+   DEBUG | 2025-03-27T17:57:33Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T17:57:33Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T17:57:33Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T17:57:33Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 246 | Follow table available ('positions',)
+    INFO | 2025-03-27T17:57:34Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 332 | Creating table options: 
+   DEBUG | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 105 | start
+   DEBUG | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 106 | finished
+   DEBUG | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 421 | program call direct
+    INFO | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 422 | start program
+    INFO | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:                      run | Line# 352 | init mysql connection
+   DEBUG | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:connect_mysql_server_local | Line# 116 | RETURN successful connection
+   DEBUG | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 167 | start
+    INFO | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 169 | db is connected
+    INFO | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('information_schema',)
+    INFO | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('mysql',)
+    INFO | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('performance_schema',)
+    INFO | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('portfolio',)
+    INFO | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('sys',)
+    INFO | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:                      run | Line# 357 | database available => True
+    INFO | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:                      run | Line# 360 | Database already available
+    INFO | 2025-03-27T17:57:40Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 308 |  start
+   DEBUG | 2025-03-27T17:57:55Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T17:57:55Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T17:57:55Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T17:57:55Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 246 | Follow table available ('positions',)
+    INFO | 2025-03-27T17:58:00Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 327 | Table positions available
+   DEBUG | 2025-03-27T17:58:08Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T17:58:08Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T17:58:08Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T17:58:08Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 246 | Follow table available ('positions',)
+    INFO | 2025-03-27T17:58:11Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 329 | Creating table options: 
+    INFO | 2025-03-27T17:59:04Z | __main__ | db_create_database_portfolio.py:            db_disconnect | Line# 148 | call disconnect
+    INFO | 2025-03-27T17:59:08Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 424 | finished program
+   DEBUG | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 105 | start
+   DEBUG | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 106 | finished
+   DEBUG | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 421 | program call direct
+    INFO | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 422 | start program
+    INFO | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:                      run | Line# 352 | init mysql connection
+   DEBUG | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:connect_mysql_server_local | Line# 116 | RETURN successful connection
+   DEBUG | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 167 | start
+    INFO | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 169 | db is connected
+    INFO | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('information_schema',)
+    INFO | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('mysql',)
+    INFO | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('performance_schema',)
+    INFO | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('portfolio',)
+    INFO | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('sys',)
+    INFO | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:                      run | Line# 357 | database available => True
+    INFO | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:                      run | Line# 360 | Database already available
+    INFO | 2025-03-27T17:59:43Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 308 |  start
+   DEBUG | 2025-03-27T18:00:05Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T18:00:05Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T18:00:05Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T18:00:05Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 246 | Follow table available ('positions',)
+    INFO | 2025-03-27T18:00:06Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 327 | Table positions available
+   DEBUG | 2025-03-27T18:00:53Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T18:00:53Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T18:00:53Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T18:00:53Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 246 | Follow table available ('positions',)
+    INFO | 2025-03-27T18:00:56Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 329 | creating table options: 
+    INFO | 2025-03-27T18:01:52Z | __main__ | db_create_database_portfolio.py:            db_disconnect | Line# 148 | call disconnect
+    INFO | 2025-03-27T18:01:59Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 424 | finished program
+   DEBUG | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 105 | start
+   DEBUG | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 106 | finished
+   DEBUG | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 429 | program call direct
+    INFO | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 430 | start program
+    INFO | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:                      run | Line# 360 | init mysql connection
+   DEBUG | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:connect_mysql_server_local | Line# 116 | RETURN successful connection
+   DEBUG | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 167 | start
+    INFO | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 169 | db is connected
+    INFO | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('information_schema',)
+    INFO | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('mysql',)
+    INFO | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('performance_schema',)
+    INFO | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('sys',)
+    INFO | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:                      run | Line# 365 | database available => False
+    INFO | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:                      run | Line# 370 | Database => portfolio NOT available
+    INFO | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:          create_database | Line# 212 | create database portfolio
+    INFO | 2025-03-27T18:06:30Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 308 |  start
+   DEBUG | 2025-03-27T18:06:41Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T18:06:41Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T18:06:41Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T18:06:43Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 329 | creating table positions: 
+    INFO | 2025-03-27T18:06:51Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 334 | cursor output start
+    INFO | 2025-03-27T18:06:57Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 337 | cursor output finish
+   DEBUG | 2025-03-27T18:07:14Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T18:07:14Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T18:07:14Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T18:07:14Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 246 | Follow table available ('positions',)
+    INFO | 2025-03-27T18:08:16Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 329 | creating table options: 
+   DEBUG | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 105 | start
+   DEBUG | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 106 | finished
+   DEBUG | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 430 | program call direct
+    INFO | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 431 | start program
+    INFO | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:                      run | Line# 361 | init mysql connection
+   DEBUG | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:connect_mysql_server_local | Line# 116 | RETURN successful connection
+   DEBUG | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 167 | start
+    INFO | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 169 | db is connected
+    INFO | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('information_schema',)
+    INFO | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('mysql',)
+    INFO | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('performance_schema',)
+    INFO | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('portfolio',)
+    INFO | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('sys',)
+    INFO | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:                      run | Line# 366 | database available => True
+    INFO | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:                      run | Line# 369 | Database already available
+    INFO | 2025-03-27T18:10:26Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 308 |  start
+   DEBUG | 2025-03-27T18:10:35Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T18:10:35Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T18:10:35Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T18:10:35Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 246 | Follow table available ('positions',)
+    INFO | 2025-03-27T18:10:36Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 327 | Table positions available
+   DEBUG | 2025-03-27T18:10:40Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T18:10:40Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T18:10:40Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T18:10:40Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 246 | Follow table available ('positions',)
+    INFO | 2025-03-27T18:10:41Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 329 | creating table options: 
+    INFO | 2025-03-27T18:11:29Z | __main__ | db_create_database_portfolio.py:            db_disconnect | Line# 148 | call disconnect
+    INFO | 2025-03-27T18:11:33Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 433 | finished program
+   DEBUG | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 105 | start
+   DEBUG | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 106 | finished
+   DEBUG | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 430 | program call direct
+    INFO | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 431 | start program
+    INFO | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:                      run | Line# 361 | init mysql connection
+   DEBUG | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:connect_mysql_server_local | Line# 116 | RETURN successful connection
+   DEBUG | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 167 | start
+    INFO | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 169 | db is connected
+    INFO | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('information_schema',)
+    INFO | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('mysql',)
+    INFO | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('performance_schema',)
+    INFO | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('portfolio',)
+    INFO | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('sys',)
+    INFO | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:                      run | Line# 366 | database available => True
+    INFO | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:                      run | Line# 369 | Database already available
+    INFO | 2025-03-27T18:13:28Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 308 |  start
+   DEBUG | 2025-03-27T18:13:39Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T18:13:39Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T18:13:39Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T18:13:39Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 246 | Follow table available ('positions',)
+    INFO | 2025-03-27T18:13:40Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 327 | Table positions available
+   DEBUG | 2025-03-27T18:13:43Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T18:13:43Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T18:13:43Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T18:13:43Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 246 | Follow table available ('positions',)
+    INFO | 2025-03-27T18:13:44Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 329 | creating table options: 
+    INFO | 2025-03-27T18:13:53Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 334 | cursor output start
+    INFO | 2025-03-27T18:13:55Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 337 | cursor output finish
+    INFO | 2025-03-27T18:14:10Z | __main__ | db_create_database_portfolio.py:            db_disconnect | Line# 148 | call disconnect
+    INFO | 2025-03-27T18:14:15Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 433 | finished program
+   DEBUG | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 105 | start
+   DEBUG | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 106 | finished
+   DEBUG | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 430 | program call direct
+    INFO | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 431 | start program
+    INFO | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:                      run | Line# 361 | init mysql connection
+   DEBUG | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:connect_mysql_server_local | Line# 116 | RETURN successful connection
+   DEBUG | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 167 | start
+    INFO | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 169 | db is connected
+    INFO | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('information_schema',)
+    INFO | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('mysql',)
+    INFO | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('performance_schema',)
+    INFO | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('portfolio',)
+    INFO | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('sys',)
+    INFO | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:                      run | Line# 366 | database available => True
+    INFO | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:                      run | Line# 369 | Database already available
+    INFO | 2025-03-27T18:15:05Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 308 |  start
+   DEBUG | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 105 | start
+   DEBUG | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:              init_logger | Line# 106 | finished
+   DEBUG | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 430 | program call direct
+    INFO | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 431 | start program
+    INFO | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:                      run | Line# 361 | init mysql connection
+   DEBUG | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:connect_mysql_server_local | Line# 116 | RETURN successful connection
+   DEBUG | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 167 | start
+    INFO | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 169 | db is connected
+    INFO | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('information_schema',)
+    INFO | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('mysql',)
+    INFO | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('performance_schema',)
+    INFO | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('portfolio',)
+    INFO | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:       db_check_available | Line# 182 | Follow database available ('sys',)
+    INFO | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:                      run | Line# 366 | database available => True
+    INFO | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:                      run | Line# 369 | Database already available
+    INFO | 2025-03-27T18:15:59Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 308 |  start
+   DEBUG | 2025-03-27T18:16:09Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T18:16:09Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T18:16:09Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T18:16:09Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 246 | Follow table available ('positions',)
+    INFO | 2025-03-27T18:16:10Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 327 | Table positions available
+   DEBUG | 2025-03-27T18:16:13Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 228 | start
+    INFO | 2025-03-27T18:16:13Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 230 | db is connected
+    INFO | 2025-03-27T18:16:13Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 238 | use database portfolio 
+    INFO | 2025-03-27T18:16:13Z | __main__ | db_create_database_portfolio.py:    table_check_available | Line# 246 | Follow table available ('positions',)
+    INFO | 2025-03-27T18:16:17Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 329 | creating table options: 
+    INFO | 2025-03-27T18:16:24Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 334 | cursor output start
+    INFO | 2025-03-27T18:16:26Z | __main__ | db_create_database_portfolio.py:            create_tables | Line# 337 | cursor output finish
+    INFO | 2025-03-27T18:16:35Z | __main__ | db_create_database_portfolio.py:            db_disconnect | Line# 148 | call disconnect
+    INFO | 2025-03-27T18:16:40Z | __main__ | db_create_database_portfolio.py:                 <module> | Line# 433 | finished program

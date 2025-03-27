@@ -14,7 +14,7 @@ DB_NAME = 'portfolio'
 
 TABLES = {}
 TABLES['positions'] = (
-    "CREATE TABLE `position` ("
+    "CREATE TABLE `positions` ("
     " `no` int NOT NULL AUTO_INCREMENT,"
     " `contract` enum('STK','OPT') NOT NULL,"
     " `strike` DECIMAL(6, 6) NOT NULL,"
@@ -51,16 +51,16 @@ TABLES['positions'] = (
 TABLES['options'] = (
     "CREATE TABLE `options` ("
     " `no` int NOT NULL AUTO_INCREMENT,"
-    #  " `conId` int NOT NULL,"
-    #  " `symbol` varchar(8) NOT NULL,"
-    #  " `lastTradeDateOrContractMonth` date NOT NULL,"
-    #  " `strike` DECIMAL(6, 6) NOT NULL,"
-    #  " `right` enum('C','P') NOT NULL,"
-    #  " `multiplier`int NOT NULL,"
-    #  " `primaryExchange` varchar(8) NOT NULL,"
-    #  " `currency` varchar(3) NOT NULL ,"
-    #  " `localSymbol' varchar(8) NOT NULL ,"
-    #  " `tradingClass` varchar(8) NOT NULL ,"
+    " `conId` int NOT NULL,"
+    " `symbol` varchar(8) NOT NULL,"
+    " `lastTradeDateOrContractMonth` date NOT NULL,"
+    " `strike` DECIMAL(6, 6) NOT NULL,"
+    " `right` enum('C','P') NOT NULL,"
+    " `multiplier` int NOT NULL,"
+    # " `primaryExchange` varchar(8) NOT NULL,"
+    # " `currency` varchar(3) NOT NULL ,"
+    # " `localSymbol' varchar(8) NOT NULL ,"
+    # " `tradingClass` varchar(8) NOT NULL ,"
     "  PRIMARY KEY (`no`)"
     ") ENGINE=InnoDB")
 
@@ -304,12 +304,13 @@ def table_create(cnx, table_name):
 
 # creates all tables from struct TABLES
 def create_tables(cnx, database):
-
+    
+    log.info(" start")
+    
     with cnx.cursor() as cursor:
 
         # switch to database
         try:
-            log.info(" start")
             cursor.execute("USE {}".format(DB_NAME))
         except Exception as e:
             log.error("An error => {} occurred line:#{}".format(
@@ -319,19 +320,26 @@ def create_tables(cnx, database):
 
        #  iterator = cursor.execute("USE {}".format(database))
         try:
-
             for table_name in TABLES:
                 table_description = TABLES[table_name]
                 try:
-
                     if table_check_available(cnx, table_name):
-                        log.info("Creating table {}: ".format(table_name))
-                        cursor.execute(table_description)
-                    else:
                         log.info("Table {} available".format(table_name))
+                    else:
+                        log.info("creating table {}: ".format(table_name))
+                        cursor.execute(table_description)
+                        cnx.commit()
+
+                        # log cursor
+                        log.info("cursor output start")
+                        for x in cursor:
+                            log.info("{}".format(x))
+                        log.info("cursor output finish")
+
                 except mysql.connector.Error as err:
                     if err.errno == errorcode.ER_TABLE_EXISTS_ERROR:
-                        log.error("Error".format(err.msg))
+                        # log.error("Error".format(err.msg))
+                        log.error("Error".format(err))
                 # FROM HERE last entry
                 # https://stackoverflow.com/questions/1278705/when-i-catch-an-exception-how-do-i-get-the-type-file-and-line-number
                 except Exception as e:
@@ -422,7 +430,7 @@ if __name__ == "__main__":
         log.debug("program call direct")
         log.info("start program")
         run()
-        log.info("finished Prg")
+        log.info("finished program")
         exit(0)
     except Exception as e:
         print(f"An error occurred: {e}")
