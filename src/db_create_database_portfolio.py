@@ -23,7 +23,7 @@ TABLES['positions'] = (
     "  PRIMARY KEY (`no`)"
     ") ENGINE=InnoDB")
 
-TABLES['positions'] = (
+TABLES['positions_temp2'] = (
     "CREATE TABLE `position` ("
     " `no` int NOT NULL AUTO_INCREMENT,"
     " `contract` enum('STK','OPT') NOT NULL,"
@@ -266,16 +266,26 @@ def table_create(cnx, table_name):
             cursor.execute(table_description)
             cnx.commit()
             
+            log.info("cursor output start")
             for x in cursor:
-                print(x)
+                log.info("{}".format(x))
+            log.info("cursor output finish")
+
         except mysql.connector.Error as err_local:
             if err_local.errno == errorcode.ER_TABLE_EXISTS_ERROR:
                 log.error(
                     "database table already exists => {} - Check before you are create twice".format(table_name))
             else:
                 log.error("Err {}".format(err_local))
-        else:
-            print(err_local.msg)
+
+        # FROM HERE last entry
+        # https://stackoverflow.com/questions/1278705/when-i-catch-an-exception-how-do-i-get-the-type-file-and-line-number
+        except Exception as e:
+            log.error("An error => {} occurred line:#{}".format(
+                e, e.__traceback__.tb_lineno))
+        
+        # else:
+                # print(err_local.msg)
 
 
 def run():
