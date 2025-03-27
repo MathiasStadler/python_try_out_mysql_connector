@@ -57,10 +57,10 @@ TABLES['options'] = (
     " `strike` DECIMAL(6, 6) NOT NULL,"
     " `right` enum('C','P') NOT NULL,"
     " `multiplier` int NOT NULL,"
-    # " `primaryExchange` varchar(8) NOT NULL,"
-    # " `currency` varchar(3) NOT NULL ,"
-    # " `localSymbol' varchar(8) NOT NULL ,"
-    # " `tradingClass` varchar(8) NOT NULL ,"
+    " `primaryExchange` varchar(8) NOT NULL,"
+    " `currency` varchar(3) NOT NULL,"
+    " `localSymbol` varchar(8) NOT NULL,"
+    " `tradingClass` varchar(8) NOT NULL,"
     "  PRIMARY KEY (`no`)"
     ") ENGINE=InnoDB")
 
