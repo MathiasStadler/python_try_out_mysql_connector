@@ -9,8 +9,6 @@ import mysql.connector
 DB_NAME = 'portfolio'
 
 
-
-
 # e.g.
 # https://dev.mysql.com/doc/connector-python/en/connector-python-example-ddl.html
 
@@ -23,46 +21,46 @@ TABLES['positions'] = (
     "  PRIMARY KEY (`no`)"
     ") ENGINE=InnoDB")
 
-TABLES['positions_temp2'] = (
-    "CREATE TABLE `position` ("
-    " `no` int NOT NULL AUTO_INCREMENT,"
-    " `contract` enum('STK','OPT') NOT NULL,"
-    " `strike` DECIMAL(6, 6) NOT NULL,"
-    "  PRIMARY KEY (`no`)"
-    ") ENGINE=InnoDB") 
+# TABLES['positions'] = (
+#     "CREATE TABLE `position` ("
+#     " `no` int NOT NULL AUTO_INCREMENT,"
+#     " `contract` enum('STK','OPT') NOT NULL,"
+#     " `strike` DECIMAL(6, 6) NOT NULL,"
+#     "  PRIMARY KEY (`no`)"
+#     ") ENGINE=InnoDB")
 
-TABLES['positions_temp'] = (
-    "CREATE TABLE `position` ("
-    " `no` int NOT NULL AUTO_INCREMENT,"
-    "  PRIMARY KEY (`no`)"
-    ") ENGINE=InnoDB")
+# TABLES['positions'] = (
+#     "CREATE TABLE `position` ("
+#     " `no` int NOT NULL AUTO_INCREMENT,"
+#     "  PRIMARY KEY (`no`)"
+#     ") ENGINE=InnoDB")
 
 # Option(
 # conId=763248479,
-# symbol='WSM', 
-# lastTradeDateOrContractMonth='20250417', 
-# strike=150.0, 
-# right='P', 
-# multiplier='100', 
-# primaryExchange='AMEX', 
-# currency='USD', 
-# localSymbol='WSM   250417P00150000', 
+# symbol='WSM',
+# lastTradeDateOrContractMonth='20250417',
+# strike=150.0,
+# right='P',
+# multiplier='100',
+# primaryExchange='AMEX',
+# currency='USD',
+# localSymbol='WSM   250417P00150000',
 # tradingClass='WSM')
 # ]
 
 TABLES['options'] = (
     "CREATE TABLE `options` ("
     " `no` int NOT NULL AUTO_INCREMENT,"
-  #  " `conId` int NOT NULL,"
-  #  " `symbol` varchar(8) NOT NULL,"
-  #  " `lastTradeDateOrContractMonth` date NOT NULL,"
-  #  " `strike` DECIMAL(6, 6) NOT NULL,"
-  #  " `right` enum('C','P') NOT NULL,"
-  #  " `multiplier`int NOT NULL,"
-  #  " `primaryExchange` varchar(8) NOT NULL,"
-  #  " `currency` varchar(3) NOT NULL ,"
-  #  " `localSymbol' varchar(8) NOT NULL ,"
-  #  " `tradingClass` varchar(8) NOT NULL ,"
+    #  " `conId` int NOT NULL,"
+    #  " `symbol` varchar(8) NOT NULL,"
+    #  " `lastTradeDateOrContractMonth` date NOT NULL,"
+    #  " `strike` DECIMAL(6, 6) NOT NULL,"
+    #  " `right` enum('C','P') NOT NULL,"
+    #  " `multiplier`int NOT NULL,"
+    #  " `primaryExchange` varchar(8) NOT NULL,"
+    #  " `currency` varchar(3) NOT NULL ,"
+    #  " `localSymbol' varchar(8) NOT NULL ,"
+    #  " `tradingClass` varchar(8) NOT NULL ,"
     "  PRIMARY KEY (`no`)"
     ") ENGINE=InnoDB")
 
@@ -109,8 +107,6 @@ def init_logger():
     return log
 
 
-
-
 # connect mysql-server
 def connect_mysql_server_local(config, attempts=3, delay=2):
     attempt = 1
@@ -118,6 +114,7 @@ def connect_mysql_server_local(config, attempts=3, delay=2):
     while attempt < attempts + 1:
         try:
             log.debug("RETURN successful connection")
+
             return mysql.connector.connect(**config)
         except (mysql.connector.Error, IOError) as err:
             if (attempts is attempt):
@@ -141,14 +138,15 @@ def db_disconnect(cnx):
 
     # FROM HERE
     # https://dev.mysql.com/doc/connector-python/en/connector-python-api-mysqlconnection-shutdown.html
-    # Unlike disconnect(), shutdown() closes the client connection 
+    # Unlike disconnect(), shutdown() closes the client connection
     # without attempting to send a QUIT command to the server first.
-    #  Thus, it will not block if the connection is disrupted 
+    #  Thus, it will not block if the connection is disrupted
     # for some reason such as network failure.
 
     try:
-        cnx.shutdown()
-       
+
+        log.info("call disconnect")
+        cnx.close()
 
     except (mysql.connector.Error, IOError) as err:
         log.info(
@@ -157,6 +155,11 @@ def db_disconnect(cnx):
             attempt,
             attempts-1,
         )
+    # FROM HERE last entry
+    # https://stackoverflow.com/questions/1278705/when-i-catch-an-exception-how-do-i-get-the-type-file-and-line-number
+    except Exception as e:
+        log.error("An error => {} occurred line:#{}".format(
+            e, e.__traceback__.tb_lineno))
 
 
 def db_check_available(cnx, database_name):
@@ -170,9 +173,6 @@ def db_check_available(cnx, database_name):
             # FROM HERE
             # https://www.w3schools.com/python/python_mysql_create_db.asp
             try:
-                # cursor.execute("USE {}".format(DB_NAME))
-                # log.info("Database {} does exists.".format(DB_NAME))
-
                 cursor.execute("SHOW DATABASES")
 
                 # check if available
@@ -190,13 +190,14 @@ def db_check_available(cnx, database_name):
 
                 if err_one.errno == errorcode.ER_BAD_DB_ERROR:
                     log.error("Database error => {}".format(err_one))
-                    # return False
-                    # create_database(cursor)
-                    # log.info("Database {} created successfully.".format(DB_NAME))
-                    # cnx.database = DB_NAME
                 else:
                     log.error("Another err_one => {}".format(err_one))
                     exit(1)
+            # FROM HERE last entry
+            # https://stackoverflow.com/questions/1278705/when-i-catch-an-exception-how-do-i-get-the-type-file-and-line-number
+            except Exception as e:
+                log.error("An error => {} occurred line:#{}".format(
+                    e, e.__traceback__.tb_lineno))
 
             else:
                 return True
@@ -214,6 +215,13 @@ def create_database(cnx, db_name):
         except mysql.connector.Error as err:
             print("Failed creating database: {}".format(err))
             exit(1)
+        # FROM HERE last entry
+        # https://stackoverflow.com/questions/1278705/when-i-catch-an-exception-how-do-i-get-the-type-file-and-line-number
+        except Exception as e:
+            log.error("An error => {} occurred line:#{}".format(
+                e, e.__traceback__.tb_lineno))
+        else:
+            return True
 
 
 def table_check_available(cnx, table_name):
@@ -249,6 +257,11 @@ def table_check_available(cnx, table_name):
                 else:
                     log.error("Another err => {}".format(err))
                     exit(1)
+            # FROM HERE last entry
+            # https://stackoverflow.com/questions/1278705/when-i-catch-an-exception-how-do-i-get-the-type-file-and-line-number
+            except Exception as e:
+                log.error("An error => {} occurred line:#{}".format(
+                    e, e.__traceback__.tb_lineno))
 
             else:
                 return True
@@ -265,7 +278,7 @@ def table_create(cnx, table_name):
             log.debug("Creating table {}: ".format(table_name))
             cursor.execute(table_description)
             cnx.commit()
-            
+
             log.info("cursor output start")
             for x in cursor:
                 log.info("{}".format(x))
@@ -283,19 +296,64 @@ def table_create(cnx, table_name):
         except Exception as e:
             log.error("An error => {} occurred line:#{}".format(
                 e, e.__traceback__.tb_lineno))
-        
-        # else:
-                # print(err_local.msg)
 
+        else:
+            return True
+            # print(err_local.msg)
+
+
+# creates all tables from struct TABLES
+def create_tables(cnx, database):
+
+    with cnx.cursor() as cursor:
+
+        # switch to database
+        try:
+            log.info(" start")
+            cursor.execute("USE {}".format(DB_NAME))
+        except Exception as e:
+            log.error("An error => {} occurred line:#{}".format(
+                e, e.__traceback__.tb_lineno))
+
+        # switch to database
+
+       #  iterator = cursor.execute("USE {}".format(database))
+        try:
+
+            for table_name in TABLES:
+                table_description = TABLES[table_name]
+                try:
+
+                    if table_check_available(cnx, table_name):
+                        log.info("Creating table {}: ".format(table_name))
+                        cursor.execute(table_description)
+                    else:
+                        log.info("Table {} available".format(table_name))
+                except mysql.connector.Error as err:
+                    if err.errno == errorcode.ER_TABLE_EXISTS_ERROR:
+                        log.error("Error".format(err.msg))
+                # FROM HERE last entry
+                # https://stackoverflow.com/questions/1278705/when-i-catch-an-exception-how-do-i-get-the-type-file-and-line-number
+                except Exception as e:
+                    log.error("An error => {} occurred line:#{}".format(
+                        e, e.__traceback__.tb_lineno))
+                # else:
+                    # print(err.msg)
+            else:
+                return True
+
+        except Exception as e:
+            log.error("An error => {} occurred line:#{}".format(
+                e, e.__traceback__.tb_lineno))
 
 def run():
 
     try:
+
         log.info("init mysql connection")
         # config see on start this files
         cnx = connect_mysql_server_local(config)
 
-        # log.info("check db => {}".format(db_check_available(cnx,DB_NAME)))
         result = db_check_available(cnx, DB_NAME)
         log.info("database available => {}".format(result))
 
@@ -303,44 +361,47 @@ def run():
             log.info("Database already available")
         else:
             log.info("Database => {} NOT available".format(DB_NAME))
+
             # create it now
             create_database(cnx, DB_NAME)
 
-        table_name = "positions"
+        create_tables(cnx,DB_NAME)
 
-        # result = table_check_available(cnx, "portfolio")
-        result = table_check_available(cnx, table_name)
+        # table_name = "positions"
 
-        if result:
-            log.info("Table available => {}".format(result))
-        else:
-            log.info("Table not available => create it now ;-)")
-            
-            # crete table
-            result = table_create(cnx, table_name)
+        # # result = table_check_available(cnx, "portfolio")
+        # result = table_check_available(cnx, table_name)
 
-            if result:
-                 log.info("Table available => {}".format(result))
-            else:
-                log.info("Table create result {}".format(result))
+        # if result:
+        #     log.info("Table available => {}".format(result))
+        # else:
+        #     log.info("Table not available => create it now ;-)")
 
-        # next table 
-        table_name = "options"
-        result = table_check_available(cnx, table_name)
+        #     # crete table
+        #     result = table_create(cnx, table_name)
 
-        if result:
-            log.info("Table available => {}".format(result))
-        else:
-            log.info("Table not available => create it now ;-)")
-            table_create(cnx, table_name)
- 
-        if result:
-            log.info("Table available => {}".format(result))
-        else:
-            log.info("Table not available => create it now ;-)")
-            table_create(cnx, table_name)
+        #     if result:
+        #          log.info("Table available => {}".format(result))
+        #     else:
+        #         log.info("Table create result {}".format(result))
 
-        # db_disconnect(cnx)
+        # # next table
+        # table_name = "options"
+        # result = table_check_available(cnx, table_name)
+
+        # if result:
+        #     log.info("Table available => {}".format(result))
+        # else:
+        #     log.info("Table not available => create it now ;-)")
+        #     table_create(cnx, table_name)
+
+        # if result:
+        #     log.info("Table available => {}".format(result))
+        # else:
+        #     log.info("Table not available => create it now ;-)")
+        #     table_create(cnx, table_name)
+
+        db_disconnect(cnx)
 
     # FROM HERE last entry
     # https://stackoverflow.com/questions/1278705/when-i-catch-an-exception-how-do-i-get-the-type-file-and-line-number
@@ -359,9 +420,9 @@ if __name__ == "__main__":
     try:
         log = init_logger()
         log.debug("program call direct")
-        log.info("Start Program")
+        log.info("start program")
         run()
-        log.info("Finish Prg")
+        log.info("finished Prg")
         exit(0)
     except Exception as e:
         print(f"An error occurred: {e}")
